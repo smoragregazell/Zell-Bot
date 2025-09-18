@@ -81,7 +81,7 @@ app.include_router(compare_router)
 
 @app.get("/")
 async def root():
-    return {"message": "AI Assistant API is running 🚀🚀🚀🚀"}
+    return {"message": "AI Assistant API is running 💡"}
 
 # Initialize FAISS (semantic search)
 from Tools.semantic_tool import init_semantic_tool
