@@ -3,6 +3,7 @@ version: '3.8'
 services:
   zell-bot:
     build: .
+    image: zell-bot:latest
     ports:
       - "5050:5050"
     env_file:
