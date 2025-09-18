@@ -21,7 +21,7 @@ git pull origin "$CURRENT_BRANCH"
 
 # Stop and remove existing containers
 echo "🛑 Stopping and removing existing containers..."
-docker-compose down
+docker compose down
 
 # Remove the existing image to force a fresh build
 echo "🗑️  Removing existing image..."
@@ -29,14 +29,14 @@ docker rmi zell-bot:latest 2>/dev/null || echo "Image not found, continuing..."
 
 # Build the new image
 echo "🔨 Building new Docker image..."
-docker-compose build --no-cache
+docker compose build --no-cache
 
 # Start the containers
 echo "▶️  Starting containers..."
-docker-compose up -d
+docker compose up -d
 
 # Show container status
 echo "📊 Container status:"
-docker-compose ps
+docker compose ps
 
 echo "✅ Zell-Bot redeploy completed successfully!"
